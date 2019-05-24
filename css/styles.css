@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito|Work+Sans:500'); /*Google font import */
+/* apply a natural box layout model to all elements */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/*** GENERAL ***/
+
+/*Hide an element, only to be read by a screen reader */
+.sr-only {
+	position: absolute; width: 1px; height: 1px;
+	padding: 0; margin: -1px;
+	overflow: hidden; border: 0;
+}
+
+html {
+  overflow:scroll;
+}
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
+
+/*** TYPOGRAPHY ***/
+h1, h2, h3, p, div {
+	color:#fff;
+	text-align:center;
+}
+
+h1, h2, h3 { font-family: 'Work Sans', sans-serif; }
+p, div, textarea, footer { font-family: 'Nunito', sans-serif; }
+
+#copyright {display:none; } /*hide this; appears when printing */
+
+/*** LAYOUT ***/
+.pros-column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+
+.cons-column {
+	float:right;
+	width:50%;
+	padding:10px;
+}
+
+/* social media font awesome icons - container */
+.social {
+	display: flex;
+	flex-direction:right;
+	justify-content:center;
+}
+i[class~=fas] { 
+	cursor: pointer;
+	position:absolute;
+	top:10px;
+	right:10px;
+}
+
+hr {
+	border-color:#66a1c1;
+}
+
+/*font awesome icon editing */
+i[class~=fab] {
+	color:#fff;
+	font-size:15px;
+	padding:0 10px;
+}
+
+i[class~=fab]:visited,i[class~=fas]:visited { color:#fff; }
+i[class~=fab]:active, i[class~=fas]:active { color:#66a1c1; }
+i[class~=fab]:hover, i[class~=fas]:hover { color:#C29A67; }
+
+/*** DESIGN ***/
+body {
+	background-color:#5A4180; /* For browsers that do not support gradients */
+	background-image: linear-gradient(to right, #2D2140, #4B32A4); /* Purple gradient background */
+}
+
+form { /* Sets the text-box to be the entire height of the screen */
+	display:flex;
+	height:100%;
+}
+
+textarea {
+	background-color:rgba(255,255,255,0); /* Hides the default white background color of the element */
+	text-align:center;
+	color:#fff;
+	flex-grow:1;
+	border:none;
+}
+
+#addBorderRight {
+	border-right:2px solid #66a1c1;
+	border-width:3px;
+}
+
+/*** MEDIA QUERIES ***/
+/* Projectors, 2nd screens, etc. and above */
+@media (min-width: 1401px) {
+	h1 { font-size:72px; }
+	h2 { font-size:52px; }
+	textarea { font-size:36px; }
+	p { font-size:18px; }
+	i[class~=fab], i[class~=fas] { font-size:28px; }
+}
+/* Device = Desktops */
+@media (min-width: 1281px) and (max-width: 1400px) {
+	h1 { font-size:68px; }
+	h2 { font-size:48px; }
+	textarea { font-size:32px; }
+	p { font-size:18px; }
+	i[class~=fab], i[class~=fas] { font-size:24px; }
+}
+
+/* Device = Laptops, Desktops */
+@media (min-width: 1024px) and (max-width: 1280px) {
+	h1 { font-size:54px; }
+	h2 { font-size:38px; }
+	textarea { font-size:24px; }
+	p { font-size:16px; }
+	i[class~=fab], i[class~=fas] { font-size:21px; }
+}
+
+/* Device = Tablets, Ipads (landscape) */
+@media (min-width: 768px) and (max-width: 1023px) and (orientation: landscape) {
+	h1 {font-size: 42px; }
+ 	h2 {font-size:34px; }
+	textarea { font-size:22px; }
+	p { font-size:18px; }
+	i[class~=fab], i[class~=fas] { font-size:21px; }
+}
+
+/* Device = Tablets, Ipads (portrait) */
+@media (min-width: 768px) and (max-width: 1023px) {
+	h1 { font-size:36px; }
+	h2 { font-size:28px; }
+	textarea { font-size:18px; }
+	p { font-size:16px; }
+	i[class~=fab], i[class~=fas] { font-size:18px; }
+}
+
+/* Device = Low Resolution Tablets, Mobiles (Landscape) */
+@media (min-width: 381px) and (max-width: 767px) {
+	h1 { font-size:17px; }
+	h2 { font-size:17px; }
+	textarea { font-size:17px; }
+	p { font-size:14px; }
+	i[class~=fab] { font-size:16px; }
+	i[class~=fas] {display: none; }
+}
+
+/* Printer friendly view */
+@media print {
+	body { background-color:#fff; }
+	h1, h2, textarea, hr, p, #addBorderRight { color:#000; }
+	.social, i[class~=fas] { display:none; } 	/* hide the icons since they can't be clicked on in print */
+	#copyright { display:block; }
+}

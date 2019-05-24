@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+	Adam Hughes
+	Started May 2019
+	An online pros and cons list tool
+-->
+
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<title>Pros and Cons List by Adam Hughes</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Font Awesome -->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="css/styles.css">
+
+	</head>
+	
+	<body>
+		<div>
+			<a title="Print your List" onclick="printer()"><i class="fas fa-print" style="padding-right:10px;"></i></a>
+			<h1>Pros and Cons List</h1>
+			<p>Need help making a decision? Use our online tool to compare the good and bad things that come from your decision.</p>
+			<div class="social">
+				<a title="Dev's Instagram" href="https://www.instagram.com/adamhughesofficial/" target="_blank"><i class="fab fa-instagram"></i></a>
+				<a title="Dev's Linkedin" href="https://www.linkedin.com/in/adamphughes/" target="_blank"><i class="fab fa-linkedin"></i></a>
+			</div>
+			<p id="copyright">&#xA9; Adam Hughes</p>
+		</div>
+		
+		<div id="addBorderRight" class = "pros-column">
+			<h2>Pros</h2>
+			<hr size='3'>
+			<form>
+				<textarea rows="100%" placeholder="Example: It could really help my career"></textarea>
+			</form>
+		</div>
+		<div class="cons-column">
+			<h2>Cons</h2>
+			<hr size='3'>
+			<form>
+				<textarea rows="100%" placeholder="Example: I would really miss my coworkers"></textarea>
+			</form>
+		</div>
+		
+		<footer>
+			<p>&#xA9; Created by Adam Hughes</p>
+			<!-- <a title="Adam's Instagram" href="https://www.instagram.com/adamhughesofficial/" target="_blank"><i class="fab fa-instagram"></i></a> -->
+		</footer>
+		
+		<script>
+			if(window.innerHeight > window.innerWidth){
+			alert("We noticed your phone is in portrait mode. This tool works better if you rotate your phone to landscape mode.");
+			}
+			
+			<!-- Printer friendly function -->
+			function printer() {
+				window.print();
+			}
+		</script>
+	</body>
